@@ -1,0 +1,58 @@
+﻿@model WebNotepad.Models.ViewModels.ListOfNotesVM
+@{
+    ViewData["Title"] = "List Of Notes";
+}
+
+<head>
+    <link rel="stylesheet" href="~/css/list-of-notes_index/list-of-notes.css" />
+</head>
+
+<div class="listofnotes_content">
+    <h1 class="title">List Of Notes</h1>
+    <ul class="list">
+        <li class="list-item">
+            <div class="preview-title">Title</div>
+            <div class="preview-descr">This is a start of descriptions...</div>
+            <div class="preview-time">02.04.2024 14-05</div>
+            <div class="preview-controls"></div>
+        </li>
+
+        @* @if (Model.Notes.Count > 0)
+        {
+            foreach (Note note in Model.Notes)
+            {
+                <li class="list-item">
+                    <div class="preview-title">Title</div>
+                    <div class="preview-descr">This is a start of descriptions...</div>
+                    <div class="preview-time">02.04.2024 14-05</div>
+                    <div class="preview-controls"></div>
+                </li>
+            }
+        } *@
+        
+    </ul>
+</div>
+
+@section Scripts {
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+
+            const list = document.querySelectorAll('.list-item');
+
+            list.forEach((item) => {
+                item.addEventListener('click', openSelectedNote)
+            })
+
+            function openSelectedNote(e) {
+                // const note_id = e.target.note_id;
+
+                // const url = `"http://localhost:7108" + "/Note/" + ${note_id}`;
+                const url = `"http://localhost:7108" + "/note"`;
+
+                const query = await fetch(url);
+            }
+
+        });
+    </script>
+}
+

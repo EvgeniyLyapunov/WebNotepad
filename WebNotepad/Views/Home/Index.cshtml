@@ -1,0 +1,55 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<head>
+    <link rel="stylesheet" href="~/css/home-index/home-index.css" />
+</head>
+
+<div class="text-center start-page-content">
+    <div class="row pt-4 pb-4">
+        <div class="col-4 title-col">
+            <h1 class="display-4">Web Notepad</h1>
+        </div>
+        <div class="col-8 outline-dev sub-title-col">
+            <h2 class="sub-title">Welcome to project. </h2>
+            <p class="sub-title-descr">
+                Проект "Web Notepad" реализуется как практика C#, SQL, Dapper, ASP.NET Core MVC,
+            </p>
+            <p class="sub-title-descr">
+                а так же как практика использования JavaScript, Css, Html в Razor pages
+            </p>
+            <p class="sub-title-descr mt-2 mb-1">
+                <i>В данном проекте будут реализованы:</i>
+            </p>
+            <p class="sub-title-descr">
+                - Создание карточек - заметок с неограниченной глубиной вложенности
+            </p>
+            <p class="sub-title-descr">
+                - Сохранение форматирования текста
+            </p>
+            <p class="sub-title-descr">
+                - Возможность пометить фрагмент текста как код -> подсветка синтаксиса
+            </p>
+            <p class="sub-title-descr">
+                - Вкладка с заголовками со всех уровней вложенности, навигация по ним
+            </p>
+            <p class="sub-title-descr">
+                - Хранение карточек-заметок в базе данных
+            </p>
+        </div>
+    </div>
+
+    <div class="row mt-5 pt-4 pb-4 d-flex justify-content-end">
+        <div class="col-3">
+            <a asp-controller="ListOfNotes" asp-action="Index" class="btn btn-primary text-white w-75 start-page-btn">
+                List of Notes
+            </a>
+        </div>
+        <div class="col-3">
+            <a class="btn btn-success text-white w-75 start-page-btn">
+                Create New Note
+            </a>
+        </div>
+    </div>
+</div>
