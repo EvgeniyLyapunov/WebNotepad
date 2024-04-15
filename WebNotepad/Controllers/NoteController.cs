@@ -10,5 +10,12 @@ namespace WebNotepad.Controllers
         {
             return View();
         }
+
+        [HttpGet]
+        [Route("/newnote")]
+        public IActionResult NewNote()
+        {
+            return View();
+        }
     }
 }
