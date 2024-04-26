@@ -16,8 +16,8 @@
         top: 0px;
         right: 0px;
         bottom: 0px;
-        background: url(../../Images/laptop.png) left -100px bottom 0px / 900px 450px no-repeat, url(../../Images/lists.png) right 10px top 80px / 650px 320px no-repeat;
-        filter: opacity(0.15)
+          background: url(../../Images/inspiration.png) left 50px bottom 30px / 450px 430px no-repeat;
+        filter: opacity(0.15)       
     }
 
 .title {
